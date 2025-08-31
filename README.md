@@ -5,8 +5,6 @@ This project explores model behavior across bias-sensitive datasets (e.g., Holis
 
 The repository is designed for **collaborative experimentation**: notebooks handle the core workflow, while optional helper modules keep code reusable and clean. Future extensions (e.g., a dashboard or API) can plug in without restructuring.
 
----
-
 ## 🚀 Goals
 
 - **Benchmark** multiple LLMs (DeepSeek-R1, Llama-3.1, Qwen-3, Gemma-3)  

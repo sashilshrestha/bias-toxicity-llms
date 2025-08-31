@@ -15,33 +15,33 @@ The repository is designed for **collaborative experimentation**: notebooks hand
 
 ## 📂 Repository Layout
 
-📦 llm-bias-benchmark
-┣ 📒 notebooks/ # Jupyter notebooks for experiments
-┃ ┣ 📘 00_setup.ipynb # environment checks, imports, API keys
-┃ ┣ 📘 10_datasets.ipynb # dataset loading & preprocessing
-┃ ┣ 📘 20_baseline_eval.ipynb # initial bias evaluation on models
-┃ ┣ 📘 30_mitigation_eval.ipynb # test mitigation strategies
-┃ ┣ 📘 40_stats_and_plots.ipynb # aggregate metrics, generate charts
-┃ ┗ 📘 90_export_results.ipynb # prepare data for reporting/dashboard
-┣ 📂 data/ # (gitignored) datasets
-┃ ┣ 📂 raw/ # original downloads
-┃ ┣ 📂 interim/ # cleaned/intermediate data
-┃ ┗ 📂 processed/ # ready-to-use datasets
-┣ 📂 results/ # (gitignored) outputs
-┃ ┣ 📂 runs/ # per-run artifacts (metrics, logs, plots)
-┃ ┗ 📂 exports/ # aggregated results for dashboards/reports
-┣ 📂 src/ # optional Python helpers
-┃ ┗ 📂 lbm/
-┃ ┣ 📄 datasets.py # dataset loaders
-┃ ┣ 📄 attacks.py # attack templates
-┃ ┣ 📄 models.py # model API wrappers
-┃ ┣ 📄 metrics.py # bias/fairness metrics
-┃ ┗ 📄 eval.py # evaluation loops
-┣ 📂 tests/ # unit tests for metrics/helpers
-┣ 📂 dashboard/ (optional) # placeholder for future visualisation
-┣ 📄 .gitignore
-┣ 📄 README.md
-┗ 📄 requirements.txt or pyproject.toml
+📦 llm-bias-benchmark  
+ ┣ 📒 notebooks/               # Jupyter notebooks for experiments  
+ ┃ ┣ 📘 00_setup.ipynb         # environment checks, imports, API keys  
+ ┃ ┣ 📘 10_datasets.ipynb      # dataset loading & preprocessing  
+ ┃ ┣ 📘 20_baseline_eval.ipynb # initial bias evaluation on models  
+ ┃ ┣ 📘 30_mitigation_eval.ipynb # test mitigation strategies  
+ ┃ ┣ 📘 40_stats_and_plots.ipynb # aggregate metrics, generate charts  
+ ┃ ┗ 📘 90_export_results.ipynb  # prepare data for reporting/dashboard  
+ ┣ 📂 data/                    # (gitignored) datasets  
+ ┃ ┣ 📂 raw/                   # original downloads  
+ ┃ ┣ 📂 interim/               # cleaned/intermediate data  
+ ┃ ┗ 📂 processed/             # ready-to-use datasets  
+ ┣ 📂 results/                 # (gitignored) outputs  
+ ┃ ┣ 📂 runs/                  # per-run artifacts (metrics, logs, plots)  
+ ┃ ┗ 📂 exports/               # aggregated results for dashboards/reports  
+ ┣ 📂 src/                     # optional Python helpers  
+ ┃ ┗ 📂 lbm/  
+ ┃   ┣ 📄 datasets.py          # dataset loaders  
+ ┃   ┣ 📄 attacks.py           # attack templates  
+ ┃   ┣ 📄 models.py            # model API wrappers  
+ ┃   ┣ 📄 metrics.py           # bias/fairness metrics  
+ ┃   ┗ 📄 eval.py              # evaluation loops  
+ ┣ 📂 tests/                   # unit tests for metrics/helpers  
+ ┣ 📂 dashboard/ (optional)    # placeholder for future visualisation  
+ ┣ 📄 .gitignore  
+ ┣ 📄 README.md  
+ ┗ 📄 requirements.txt or pyproject.toml  
 
 ## 📊 Workflow
 
@@ -60,4 +60,4 @@ The repository is designed for **collaborative experimentation**: notebooks hand
 - **Expanded attacks** (more prompt-injection and social engineering templates)  
 
 ## 📝 License
-MIT
+Apache 2.0

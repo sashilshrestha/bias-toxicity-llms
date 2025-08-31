@@ -13,8 +13,6 @@ The repository is designed for **collaborative experimentation**: notebooks hand
 - **Evaluate mitigation strategies** and record their effect on metrics  
 - **Aggregate results** into structured exports for reporting or dashboards  
 
----
-
 ## 📂 Repository Layout
 
 📦 llm-bias-benchmark
@@ -45,8 +43,6 @@ The repository is designed for **collaborative experimentation**: notebooks hand
 ┣ 📄 README.md
 ┗ 📄 requirements.txt or pyproject.toml
 
----
-
 ## 📊 Workflow
 
 1. **Setup notebook** (`00_setup.ipynb`) → check dependencies & keys  
@@ -56,16 +52,12 @@ The repository is designed for **collaborative experimentation**: notebooks hand
 5. **Aggregate metrics & plots** (`40_stats_and_plots.ipynb`)  
 6. **Export results** (`90_export_results.ipynb`) → JSON/CSV for reporting/dashboard  
 
----
-
 ## 📈 Optional/Future Extensions
 
 - **Dashboard** (React/Chakra UI, Next.js, or Streamlit) to visualise results interactively  
 - **API layer** (FastAPI or Flask) to serve metrics to external tools  
 - **Additional datasets** for fairness and robustness evaluation  
 - **Expanded attacks** (more prompt-injection and social engineering templates)  
-
----
 
 ## 📝 License
 MIT

@@ -1,0 +1,6 @@
+metric,threshold,n_pairs,flag_rate_baseline,flag_rate_attack,b_0to1,c_1to0,n_discordant,p_mcnemar
+toxicity,0.2,4,0.25,0.75,2,0,2,0.5
+toxicity,0.3,4,0.0,0.75,3,0,3,0.25
+toxicity,0.4,4,0.0,0.5,2,0,2,0.5
+toxicity,0.5,4,0.0,0.25,1,0,1,1.0
+toxicity,0.6,4,0.0,0.25,1,0,1,1.0

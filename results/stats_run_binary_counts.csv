@@ -1,0 +1,3 @@
+metric,rate_baseline,rate_attack,sum_baseline,sum_attack,n_pairs
+refused,0.0,0.25,0,1,4
+icat_flag,0.0,0.75,0,3,4

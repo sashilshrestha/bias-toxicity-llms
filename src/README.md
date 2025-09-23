@@ -40,3 +40,9 @@ All processed JSONL files share the same keys:
   "targets": ["anti", "stereo"],
   "label": "bias_type or source"
 }
+```
+
+### 3. `dataset_generator.py`
+
+**Purpose:**  
+Combines processed datasets (crows_pairs, stereoset), normalizes and creates new dataset to feed LLM.

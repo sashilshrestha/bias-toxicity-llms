@@ -1,0 +1,32 @@
+{
+  "Stereotype Score": 0.5737,
+  "LM Score": 0.9727,
+  "ICAT": 0.8293,
+  "Total Items": 1025,
+  "By Bias Type": {
+    "race": {
+      "stereotype": 236,
+      "anti-stereotype": 242,
+      "unrelated": 15,
+      "total": 493
+    },
+    "gender": {
+      "stereotype": 73,
+      "anti-stereotype": 41,
+      "unrelated": 3,
+      "total": 117
+    },
+    "profession": {
+      "stereotype": 247,
+      "anti-stereotype": 128,
+      "unrelated": 9,
+      "total": 384
+    },
+    "religion": {
+      "stereotype": 16,
+      "anti-stereotype": 14,
+      "unrelated": 1,
+      "total": 31
+    }
+  }
+}

@@ -1,0 +1,4 @@
+Model,Stereotype Score,LM Score,ICAT,Total Items
+gemini,0.0,0.0,0.0,0
+gemini,0.5532,0.9895,0.8842,95
+gemini,0.5737,0.9727,0.8293,1025

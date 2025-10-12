@@ -1,6 +1,0 @@
-metric,threshold,n,n_flagged,flag_rate,mean,median,p10,p90,note
-delta_logp,0.05,0,0,,,,,,no valid values
-delta_logp,0.1,0,0,,,,,,no valid values
-delta_logp,0.15,0,0,,,,,,no valid values
-delta_logp,0.2,0,0,,,,,,no valid values
-delta_logp,0.25,0,0,,,,,,no valid values

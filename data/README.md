@@ -1,65 +1,62 @@
-## Datasets
+# data/
 
-- **CrowS-Pairs**
-  - Source: [NYU MLL GitHub](https://github.com/nyu-mll/crows-pairs)
-  - Raw: `data/raw/crows_pairs/crows_pairs_anonymized.csv`
-  - Processed: `data/processed/crows_pairs_10pct.jsonl`
+This directory holds all datasets and artifacts for the Weeks 10–11 pipeline.  
+We use a simple, reproducible **three-tier** layout:
 
-- **StereoSet**
-  - Source: [StereoSet GitHub](https://github.com/moinnadeem/StereoSet)
-  - Raw: `data/raw/stereoset/stereoset_dev.json`
-  - Processed:
-    - `data/processed/stereoset_intrasentence_10pct.jsonl`
-    - `data/processed/stereoset_intersentence_10pct.jsonl`
+## Layout
+- `raw/` — Source data as received (e.g., `wp1_prompts.xlsx` from WP1). **Do not edit by hand.**
+- `interim/` — Cleaned/reshaped artifacts for analysis (e.g., `wp1_prompts_prepared.json`).
+- `processed/` — Final metrics & stats (e.g., `toxicity_summary.csv`, `bias_metrics.csv`, `stats_results.csv`).
 
-- **HolisticBias**
-  - Source: [Facebook Responsible NLP](https://github.com/facebookresearch/ResponsibleNLP)
-  - Raw JSON files in `data/raw/holisticbias/`
-  - Processed: `data/processed/holisticbias_10pct.jsonl`
+## Canonical files
+- **Input:** `raw/wp1_prompts.xlsx`
+- **Prepared:** `interim/wp1_prompts_prepared.json`
+- **Processed (expected later):**
+  - `processed/toxicity_summary.csv`
+  - `processed/bias_metrics.csv`
+  - `processed/stats_results.csv`
 
-## Schema
+## Generate the prepared JSON
+From the repo root:
+```bash
+python src/lbm/prepare_wp1_gui_json.py --preview 5
+```
 
-All processed datasets follow the same schema:
+**Reads:** `data/raw/wp1_prompts.xlsx`  
+**Writes:** `data/interim/wp1_prompts_prepared.json`  
+`--preview N` prints a readable sample of N rows.
 
-```json
-{
-  "id": "unique_id",
-  "prompt": "Text prompt given to the model",
-  "targets": ["anti", "stereo"],  // may be [] for free-generation datasets
-  "label": "bias_type or source"
-}
+### Optional overrides
+```bash
+python src/lbm/prepare_wp1_gui_json.py \
+  --excel data/raw/wp1_prompts.xlsx \
+  --out data/interim/wp1_prompts_prepared.json \
+  --sheet "final_prompts_sensitive" \
+  --preview 3 --preview-width 120
+```
 
----
+### Prepared JSON schema
+| Column            | Type      | Meaning                                                                 |
+|-------------------|-----------|-------------------------------------------------------------------------|
+| `attack_id`       | string    | Unique per (prompt × model × variant), e.g., `WP1_0001_Gemini_PARA`     |
+| `condition`       | string    | Prompt type: `baseline` (direct) / `social_eng` (paraphrased) / `unsuccessful` |
+| `model_name`      | string    | One of: `Gemini`, `GPT`, `Grok`                                         |
+| `prompt_text`     | string    | Variant-specific prompt                                                 |
+| `output_text`     | string    | Model output from WP1                                                   |
+| `refusal_flag`    | int       | `1 = fail`, `0 = success/partial` (derived from WP1 test result)        |
+| `tox_score`       | float/""  | Placeholder for toxicity score (computed later)                         |
+| `has_identity`    | int/""    | Placeholder: `1` if output mentions an identity group                   |
+| `regard_label`    | string/"" | Placeholder: `{pos, neu, neg}` (only when `has_identity==1`)            |
+| `variant`         | string    | `direct` or `paraphrased`                                               |
+| `attack_category` | string    | From sheet (if present)                                                 |
+| `technique`       | string    | From sheet (if present)                                                 |
+| `wp1_test_result` | string    | Raw WP1 result used to derive `refusal_flag`                            |
 
-## 🔹 2. `registry.json`
-This is a **machine-readable index** of datasets, useful if you want scripts or dashboards to dynamically load what’s available. Think of it as the “manifest” for your processed datasets.
+### Conventions
+- Scripts **read from** `raw/`, **write to** `interim/`, and **publish to** `processed/`.
+- Keep filenames stable where possible (automation expects them).
+- If you replace `raw/wp1_prompts.xlsx`, re-run the prep script to refresh `interim/`.
 
-Example (`data/registry.json`):
-
-```json
-{
-  "crows_pairs": {
-    "raw": "data/raw/crows_pairs/crows_pairs_anonymized.csv",
-    "processed": "data/processed/crows_pairs_10pct.jsonl",
-    "size_total": 1508,
-    "size_sampled": 150
-  },
-  "stereoset_intrasentence": {
-    "raw": "data/raw/stereoset/stereoset_dev.json",
-    "processed": "data/processed/stereoset_intrasentence_10pct.jsonl",
-    "size_total": 2106,
-    "size_sampled": 210
-  },
-  "stereoset_intersentence": {
-    "raw": "data/raw/stereoset/stereoset_dev.json",
-    "processed": "data/processed/stereoset_intersentence_10pct.jsonl",
-    "size_total": 2123,
-    "size_sampled": 212
-  },
-  "holisticbias": {
-    "raw": "data/raw/holisticbias/*",
-    "processed": "data/processed/holisticbias_10pct.jsonl",
-    "size_total": 18528,
-    "size_sampled": 1852
-  }
-}
+### Troubleshooting
+- `ImportError: openpyxl` → `pip install openpyxl`
+- “File not found” → confirm `raw/wp1_prompts.xlsx` exists (or pass `--excel` to the script)

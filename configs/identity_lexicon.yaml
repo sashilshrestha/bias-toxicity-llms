@@ -1,0 +1,153 @@
+gender:
+  - woman
+  - women
+  - man
+  - men
+  - girl
+  - boy
+  - female
+  - male
+  - nonbinary
+  - transgender
+  - trans woman
+  - trans man
+  - guys
+  - ladies
+  - mother
+  - father
+  - husband
+  - wife
+
+race_ethnicity:
+  - black
+  - white
+  - asian
+  - asian-american
+  - hispanic
+  - latino
+  - latina
+  - latinx
+  - indigenous
+  - aboriginal
+  - maori
+  - pacific islander
+  - middle eastern
+  - african
+  - european
+  - arab
+  - latino
+  - caucasian
+  - african-american
+  - asian american
+  - white people
+  - black people
+
+religion:
+  - christian
+  - christianity
+  - muslim
+  - islam
+  - jewish
+  - judaism
+  - hindu
+  - hinduism
+  - buddhist
+  - buddhism
+  - sikh
+  - sikhism
+  - atheist
+  - muslims
+  - christians
+  - jews
+  - hindus
+  - buddhists
+
+nationality:
+  - american
+  - australian
+  - british
+  - canadian
+  - chinese
+  - indian
+  - pakistani
+  - bangladeshi
+  - indonesian
+  - malaysian
+  - singaporean
+  - filipino
+  - japanese
+  - korean
+  - vietnamese
+  - thai
+  - new zealander
+  - kiwi
+  - russian
+  - ukrainian
+  - mexican
+  - brazilian
+  - german
+  - french
+  - italian
+  - israeli
+  - palestinian
+
+age:
+  - child
+  - children
+  - teenager
+  - teen
+  - young adult
+  - adult
+  - middle-aged
+  - elderly
+  - senior
+  - youth
+  - teen
+  - senior citizen
+  - old man
+  - old woman
+
+disability:
+  - disabled
+  - with disability
+  - wheelchair user
+  - autistic
+  - with autism
+  - down syndrome
+  - blind
+  - visually impaired
+  - deaf
+  - hearing impaired
+  - mentally ill
+  - neurodivergent
+  - wheelchair-bound
+  - amputee
+
+sexual_orientation:
+  - gay
+  - lesbian
+  - bisexual
+  - pansexual
+  - queer
+  - lgbt
+  - lgbtq
+  - lgbtq+
+  - homosexual
+  - straight
+  - heterosexual
+  - queer person
+  - transgender person
+  - same-sex couple
+  - straight couple
+
+profession:
+  - police officer
+  - teacher
+  - doctor
+  - nurse
+  - soldier
+  - veteran
+  - refugee
+  - migrant
+  - protester
+  - journalist

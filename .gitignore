@@ -9,6 +9,9 @@ __pycache__/
 # Virtual environment
 .venv/
 
+# Data
+data/raw/
+
 # Notebooks
 .ipynb_checkpoints/
 
@@ -16,6 +19,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+pythonenv
 node_modules/
 .env
 .vscode/

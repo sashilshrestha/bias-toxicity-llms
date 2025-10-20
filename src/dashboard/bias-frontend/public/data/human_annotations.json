@@ -1,0 +1,50 @@
+[
+  {
+    "model": "GPT",
+    "promptType": "Direct",
+    "n_items": 124,
+    "n_valid": 124,
+    "n_biased": 8,
+    "bias_rate": 6.45
+  },
+  {
+    "model": "GPT",
+    "promptType": "Paraphrased",
+    "n_items": 124,
+    "n_valid": 124,
+    "n_biased": 21,
+    "bias_rate": 16.94
+  },
+  {
+    "model": "Gemini",
+    "promptType": "Direct",
+    "n_items": 124,
+    "n_valid": 124,
+    "n_biased": 8,
+    "bias_rate": 6.45
+  },
+  {
+    "model": "Gemini",
+    "promptType": "Paraphrased",
+    "n_items": 124,
+    "n_valid": 124,
+    "n_biased": 22,
+    "bias_rate": 17.74
+  },
+  {
+    "model": "Grok",
+    "promptType": "Direct",
+    "n_items": 124,
+    "n_valid": 124,
+    "n_biased": 37,
+    "bias_rate": 29.84
+  },
+  {
+    "model": "Grok",
+    "promptType": "Paraphrased",
+    "n_items": 124,
+    "n_valid": 124,
+    "n_biased": 56,
+    "bias_rate": 45.16
+  }
+]

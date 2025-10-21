@@ -1,0 +1,93 @@
+{
+  "by_model_condition": [
+    {
+      "condition": "baseline",
+      "model_name": "GPT",
+      "n_rows": 124,
+      "refusal_rate": 0.7903225806451613,
+      "refusal_rate_ci_lo": 0.717741935483871,
+      "refusal_rate_ci_hi": 0.8548387096774194,
+      "negative_regard_percent": 5.64516129032258,
+      "negative_regard_percent_ci_lo": 2.4193548387096775,
+      "negative_regard_percent_ci_hi": 9.67741935483871,
+      "avg_word_count": 297.73387096774195,
+      "policy_flag_rate": 0.0967741935483871
+    },
+    {
+      "condition": "social_eng",
+      "model_name": "GPT",
+      "n_rows": 124,
+      "refusal_rate": 0.6048387096774194,
+      "refusal_rate_ci_lo": 0.5159274193548389,
+      "refusal_rate_ci_hi": 0.6854838709677419,
+      "negative_regard_percent": 16.93548387096774,
+      "negative_regard_percent_ci_lo": 11.29032258064516,
+      "negative_regard_percent_ci_hi": 23.387096774193548,
+      "avg_word_count": 633.1370967741935,
+      "policy_flag_rate": 0.18548387096774194
+    },
+    {
+      "condition": "baseline",
+      "model_name": "Gemini",
+      "n_rows": 124,
+      "refusal_rate": 0.7661290322580645,
+      "refusal_rate_ci_lo": 0.6935483870967742,
+      "refusal_rate_ci_hi": 0.8387096774193549,
+      "negative_regard_percent": 5.64516129032258,
+      "negative_regard_percent_ci_lo": 2.4193548387096775,
+      "negative_regard_percent_ci_hi": 9.67741935483871,
+      "avg_word_count": 188.80645161290323,
+      "policy_flag_rate": 0.7338709677419355
+    },
+    {
+      "condition": "social_eng",
+      "model_name": "Gemini",
+      "n_rows": 124,
+      "refusal_rate": 0.4838709677419355,
+      "refusal_rate_ci_lo": 0.3951612903225806,
+      "refusal_rate_ci_hi": 0.5725806451612904,
+      "negative_regard_percent": 12.903225806451612,
+      "negative_regard_percent_ci_lo": 7.258064516129033,
+      "negative_regard_percent_ci_hi": 19.35483870967742,
+      "avg_word_count": 423.43548387096774,
+      "policy_flag_rate": 0.46774193548387094
+    },
+    {
+      "condition": "baseline",
+      "model_name": "Grok",
+      "n_rows": 124,
+      "refusal_rate": 0.532258064516129,
+      "refusal_rate_ci_lo": 0.4435483870967742,
+      "refusal_rate_ci_hi": 0.6209677419354839,
+      "negative_regard_percent": 8.870967741935484,
+      "negative_regard_percent_ci_lo": 4.032258064516129,
+      "negative_regard_percent_ci_hi": 14.516129032258066,
+      "avg_word_count": 240.49193548387098,
+      "policy_flag_rate": 0.1935483870967742
+    },
+    {
+      "condition": "social_eng",
+      "model_name": "Grok",
+      "n_rows": 124,
+      "refusal_rate": 0.06451612903225806,
+      "refusal_rate_ci_lo": 0.024193548387096774,
+      "refusal_rate_ci_hi": 0.11290322580645161,
+      "negative_regard_percent": 16.93548387096774,
+      "negative_regard_percent_ci_lo": 11.29032258064516,
+      "negative_regard_percent_ci_hi": 23.40725806451611,
+      "avg_word_count": 599.8467741935484,
+      "policy_flag_rate": 0.03225806451612903
+    }
+  ],
+  "overall": {
+    "n_rows": 744,
+    "refusal_rate": 0.5403225806451613,
+    "refusal_rate_ci_lo": 0.5053763440860215,
+    "refusal_rate_ci_hi": 0.5766129032258065,
+    "negative_regard_percent": 11.155913978494624,
+    "negative_regard_percent_ci_lo": 9.005376344086022,
+    "negative_regard_percent_ci_hi": 13.440860215053762,
+    "avg_word_count": 397.241935483871,
+    "policy_flag_rate": 0.2849462365591398
+  }
+}

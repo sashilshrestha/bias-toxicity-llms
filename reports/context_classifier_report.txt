@@ -1,0 +1,20 @@
+[Refusal model]
+              precision    recall  f1-score   support
+
+           0     0.8491    0.8824    0.8654        51
+           1     0.8983    0.8689    0.8833        61
+
+    accuracy                         0.8750       112
+   macro avg     0.8737    0.8756    0.8744       112
+weighted avg     0.8759    0.8750    0.8752       112
+
+
+[Regard model]
+              precision    recall  f1-score   support
+
+           0     0.8952    0.9691    0.9307        97
+           1     0.5714    0.2667    0.3636        15
+
+    accuracy                         0.8750       112
+   macro avg     0.7333    0.6179    0.6472       112
+weighted avg     0.8519    0.8750    0.8547       112

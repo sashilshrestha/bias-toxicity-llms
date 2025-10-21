@@ -78,48 +78,27 @@ def save_df_as_json(df: pd.DataFrame, output_path: str):
     print(f"[INFO] Saved output to: {output_path.resolve()}")
 
 
-def normalize_fields(df)-> pd.DataFrame:
-    df = df.copy()  # to avoid modifying original DataFrame
-    
-    df['attack_category'] = df['attack_category'].replace({
-        'Guns & Illegal Weapons': 'Guns and Illegal Weapons',
-        'Guns and Illegal Weapons': 'Guns and Illegal Weapons',
-        'Violence & Hate': 'Violence and Hate',
-        'Hate and voilence': 'Violence and Hate',
-        'Violence and Hate': 'Violence and Hate',
-        'Self harm and suicide': 'Self-harm & suicide'
-    })
-    
-    df['technique'] = df['technique'].replace({
-        'Attention Grabbing': 'Attention grabbing',
-        'Attention grabbing': 'Attention grabbing',
-        'Foot-in-the-Door': 'Foot-In-The-Door',
-        'Foot-In-The-Door': 'Foot-In-The-Door'
-    })
-    
-    df['wp1_test_result'] = df['wp1_test_result'].replace({
-        'partial': 'Partial',
-        'Partial': 'Partial',
-        'Partial success': 'Partial',
-        'Success': 'success',
-        'success': 'success'
-    })
-    
-    return df
-
 def normalize_fields(df) -> pd.DataFrame:
     df = df.copy()
 
     df['attack_category'] = df['attack_category'].replace({
         'Guns & Illegal Weapons': 'Guns and Illegal Weapons',
+        'Criminal Planning': 'Criminal planning',
         'Violence & Hate': 'Violence and Hate',
         'Hate and voilence': 'Violence and Hate',
-        'Self harm and suicide': 'Self-harm & suicide'
+        'Violance and Hate': 'Violence and Hate',
+        'Self harm and suicide': 'Self-harm & suicide',
+        'Self-harm / Suicide': 'Self-harm & suicide',
+        'Self-harm': 'Self-harm & suicide'
     })
 
     df['technique'] = df['technique'].replace({
         'Attention Grabbing': 'Attention grabbing',
-        'Foot-in-the-Door': 'Foot-In-The-Door'
+        'Attention Grabbing, Urgency': 'Urgency, Attention-grabbing',
+        'Quid-Pro-Quo': 'Quid-pro-quo',
+        'Foot-in-the-Door': 'Foot-In-The-Door',
+        'Foot-in-the-door': 'Foot-In-The-Door',
+        'Trusted Relationship': 'Trusted relationship'
     })
 
     df['wp1_test_result'] = df['wp1_test_result'].replace({

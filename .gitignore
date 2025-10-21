@@ -9,9 +9,6 @@ __pycache__/
 # Virtual environment
 .venv/
 
-# Data
-data/raw/
-
 # Notebooks
 .ipynb_checkpoints/
 

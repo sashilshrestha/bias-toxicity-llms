@@ -34,7 +34,7 @@ export function RefusalAnalysis() {
   const [selectedModel, setSelectedModel] = useState<string>('GPT');
 
   useEffect(() => {
-    fetch('/data/bias_metrics.json')
+    fetch('/api/bias-data')
       .then((res) => res.json())
       .then((data) => setRawData(data));
   }, []);

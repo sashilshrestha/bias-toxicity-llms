@@ -1,20 +1,46 @@
 [Refusal model]
+=== Tuned threshold report (best F1 for class 1) ===
+best_threshold=0.984, best_f1=0.8968
               precision    recall  f1-score   support
 
-           0     0.8491    0.8824    0.8654        51
-           1     0.8983    0.8689    0.8833        61
+           0     0.8662    0.9444    0.9037       144
+           1     0.9403    0.8571    0.8968       147
 
-    accuracy                         0.8750       112
-   macro avg     0.8737    0.8756    0.8744       112
-weighted avg     0.8759    0.8750    0.8752       112
+    accuracy                         0.9003       291
+   macro avg     0.9033    0.9008    0.9002       291
+weighted avg     0.9037    0.9003    0.9002       291
+
+
+=== Default 0.5 threshold report ===
+              precision    recall  f1-score   support
+
+           0     0.8750    0.8750    0.8750       144
+           1     0.8776    0.8776    0.8776       147
+
+    accuracy                         0.8763       291
+   macro avg     0.8763    0.8763    0.8763       291
+weighted avg     0.8763    0.8763    0.8763       291
 
 
 [Regard model]
+=== Tuned threshold report (best F1 for class 1) ===
+best_threshold=0.040, best_f1=0.4286
               precision    recall  f1-score   support
 
-           0     0.8952    0.9691    0.9307        97
-           1     0.5714    0.2667    0.3636        15
+           0     0.9345    0.8392    0.8843       255
+           1     0.3387    0.5833    0.4286        36
 
-    accuracy                         0.8750       112
-   macro avg     0.7333    0.6179    0.6472       112
-weighted avg     0.8519    0.8750    0.8547       112
+    accuracy                         0.8076       291
+   macro avg     0.6366    0.7113    0.6564       291
+weighted avg     0.8608    0.8076    0.8279       291
+
+
+=== Default 0.5 threshold report ===
+              precision    recall  f1-score   support
+
+           0     0.9091    0.9020    0.9055       255
+           1     0.3421    0.3611    0.3514        36
+
+    accuracy                         0.8351       291
+   macro avg     0.6256    0.6315    0.6284       291
+weighted avg     0.8389    0.8351    0.8370       291

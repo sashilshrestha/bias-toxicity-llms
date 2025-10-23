@@ -84,9 +84,9 @@ export function HumanAnnotations() {
       case 'Gemini':
         return '#4796E3';
       case 'Grok':
-        return '#4a6fa5';
+        return '#3b3434';
       default:
-        return '#0f0f0f';
+        return '#3b3434';
     }
   };
 

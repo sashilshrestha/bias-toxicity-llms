@@ -63,7 +63,7 @@ export function BiasOverview() {
                 "bg-card border-8 border-r-0 border-l-0 border-b-0",
                 model === "GPT" && "border-[#74AA9C]",
                 model === "Gemini" && "border-[#4796E3]",
-                model === "Grok" && "border-[#000000]",
+                model === "Grok" && "border-[#3b3434]",
             )}>
               <div className="flex px-5 gap-3">
                 <img src={getModelImg(model)} alt="" className="w-10 h-10"/>

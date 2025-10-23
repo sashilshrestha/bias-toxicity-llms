@@ -39,12 +39,11 @@ interface BiasMetric {
 
 export function BiasBreakdown() {
   const [rawData, setRawData] = useState<BiasMetric[]>([]);
-  const [selectedCondition, setSelectedCondition] = useState<string>(
-    'baseline'
-  );
+  const [selectedCondition, setSelectedCondition] =
+    useState<string>('baseline');
 
   useEffect(() => {
-    fetch('/data/bias_metrics.json')
+    fetch('/api/bias-data')
       .then((res) => res.json())
       .then((data) => setRawData(data));
   }, []);
@@ -79,7 +78,7 @@ export function BiasBreakdown() {
     },
     Neutral: {
       label: 'Neutral',
-      color: 'hsl(var(--chart-5))',
+      color: '#747474',
     },
     Negative: {
       label: 'Negative',

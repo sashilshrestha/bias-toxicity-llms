@@ -25,7 +25,7 @@ export function IdentityExplorer() {
   const [selectedCondition, setSelectedCondition] = useState<string>("all")
 
   useEffect(() => {
-    fetch("/data/bias_metrics.json")
+    fetch("/api/bias-data")
       .then((res) => res.json())
       .then((data) => setRawData(data))
   }, [])
@@ -40,11 +40,11 @@ export function IdentityExplorer() {
       }
       return true
     })
-    .slice(0, 50)
+    // .slice(0, 50)
 
   return (
     <section>
-      <Card className="border-border bg-card">
+      <Card className="border-border bg-[#f1f1f1] border-b-gray-800">
         <CardHeader>
           <CardTitle className="text-foreground">Identity Term Explorer</CardTitle>
           <CardDescription>Search and filter identity-related responses</CardDescription>

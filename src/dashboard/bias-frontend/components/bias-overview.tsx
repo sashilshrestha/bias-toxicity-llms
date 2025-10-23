@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowDown, ArrowUp } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Avatar } from "./ui/avatar"
 
 interface SummaryMetric {
   condition: string
@@ -17,7 +18,7 @@ export function BiasOverview() {
   const [summaryData, setSummaryData] = useState<SummaryMetric[]>([])
 
   useEffect(() => {
-    fetch("/data/bias_metrics_summary.json")
+    fetch("/api/bias-data-summary")
       .then((res) => res.json())
       .then((data) => setSummaryData(data))
   }, [])
@@ -26,6 +27,12 @@ export function BiasOverview() {
     const baseline = summaryData.find((d) => d.model_name === modelName && d.condition === "baseline")
     const socialEng = summaryData.find((d) => d.model_name === modelName && d.condition === "social_eng")
     return { baseline, socialEng }
+  }
+
+  const getModelImg = (modelName: string) => {
+    if (modelName === "GPT") return "https://img.freepik.com/premium-vector/chatgpt-ai-logo-icon_11410-496.jpg";
+    if (modelName === "Gemini") return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW26_bYY4S2PRKRtkug3XVKDIHhpwXhp_oYQ&s";
+    if (modelName === "Grok") return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnuyhgsRh7ORw2Lh_SAh0XXkI6R9YvvaDCxg&s";
   }
 
   const calculateChange = (baseline?: number, socialEng?: number) => {
@@ -51,11 +58,20 @@ export function BiasOverview() {
           const refusalChange = calculateChange(baseline?.refusal_rate, socialEng?.refusal_rate)
 
           return (
-            <Card key={model} className="border-border bg-card">
-              <CardHeader>
-                <CardTitle className="text-foreground">{model}</CardTitle>
-                <CardDescription>Performance metrics comparison</CardDescription>
-              </CardHeader>
+            <Card key={model}
+              className={cn(
+                "bg-card border-8 border-r-0 border-l-0 border-b-0",
+                model === "GPT" && "border-[#74AA9C]",
+                model === "Gemini" && "border-[#4796E3]",
+                model === "Grok" && "border-[#3b3434]",
+            )}>
+              <div className="flex px-5 gap-3">
+                <img src={getModelImg(model)} alt="" className="w-10 h-10"/>
+                <CardHeader className="flex-auto p-0">
+                  <CardTitle className="text-foreground">{model}</CardTitle>
+                  <CardDescription>Performance metrics comparison</CardDescription>
+                </CardHeader>
+              </div>
               <CardContent className="space-y-4">
                 <MetricRow
                   label="Identity Mention Rate"

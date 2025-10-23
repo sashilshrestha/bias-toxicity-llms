@@ -36,7 +36,7 @@ export function ModelComparison() {
   const [summaryData, setSummaryData] = useState<SummaryMetric[]>([]);
 
   useEffect(() => {
-    fetch('/data/bias_metrics_summary.json')
+    fetch('/api/bias-data-summary')
       .then((res) => res.json())
       .then((data) => setSummaryData(data));
   }, []);

@@ -25,7 +25,7 @@ export function IdentityExplorer() {
   const [selectedCondition, setSelectedCondition] = useState<string>("all")
 
   useEffect(() => {
-    fetch("/api/bias-data")
+    fetch("/data/bias_metrics.json")
       .then((res) => res.json())
       .then((data) => setRawData(data))
   }, [])

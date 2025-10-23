@@ -18,7 +18,7 @@ export function BiasOverview() {
   const [summaryData, setSummaryData] = useState<SummaryMetric[]>([])
 
   useEffect(() => {
-    fetch("/api/bias-data-summary")
+    fetch("/data/bias_metrics_summary.json")
       .then((res) => res.json())
       .then((data) => setSummaryData(data))
   }, [])

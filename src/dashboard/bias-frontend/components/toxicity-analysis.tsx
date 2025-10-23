@@ -52,11 +52,12 @@ interface ToxicityData {
 
 export function ToxicityAnalysis() {
   const [data, setData] = useState<ToxicityData[]>([]);
-  const [selectedCondition, setSelectedCondition] =
-    useState<string>('baseline');
+  const [selectedCondition, setSelectedCondition] = useState<string>(
+    'baseline'
+  );
 
   useEffect(() => {
-    fetch('/api/toxicity-data')
+    fetch('/data/toxicity_summary.json')
       .then((res) => res.json())
       .then((jsonData) => setData(jsonData));
   }, []);

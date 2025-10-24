@@ -6,6 +6,7 @@ import { IdentityExplorer } from '@/components/identity-explorer';
 import { DashboardHeader } from '@/components/dashboard-header';
 import { HumanAnnotations } from '@/components/human-annotations';
 import { ToxicityAnalysis } from '@/components/toxicity-analysis';
+import { ComprehensiveAnalysis } from '@/components/comprehensive-analysis';
 
 export default function DashboardPage() {
   return (
@@ -15,10 +16,11 @@ export default function DashboardPage() {
       </div>
       <section className="container mx-auto  max-w-3/4 px-4 py-8 space-y-8">
         <BiasOverview />
-        <ModelComparison />
+        <ComprehensiveAnalysis />
+        {/* <ModelComparison /> */}
         <div className="grid gap-8 lg:grid-cols-2">
-          <BiasBreakdown />
-          <RefusalAnalysis />
+          {/* <BiasBreakdown /> */}
+          {/* <RefusalAnalysis /> */}
         </div>
       </section>
       <div className="bg-[#f1f1f1]">
@@ -31,7 +33,7 @@ export default function DashboardPage() {
       </section>
 
       <section className="container mx-auto  max-w-3/4 px-4 py-8 space-y-8">
-        <IdentityExplorer />
+        {/* <IdentityExplorer /> */}
       </section>
     </div>
   );

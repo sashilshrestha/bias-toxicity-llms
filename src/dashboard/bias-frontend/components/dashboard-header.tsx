@@ -9,7 +9,7 @@ export function DashboardHeader() {
             <Activity className="h-5 w-5 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="text-4xl font-bold text-foreground">Bias and Toxicity Analysis Accross LLMs</h1>
+            <h1 className="text-4xl font-bold text-foreground">Bias and Toxicity Analysis Across LLMs</h1>
             <p className="text-sm text-muted-foreground">
               Analyzing model behavior across baseline and social engineering conditions
             </p>
